@@ -62,20 +62,32 @@
               Subscribe the <b>Selfglowie</b> to get latest products and discount update.
             </p>
 
-          </div>
+         <!-- Add a toggle button or checkbox -->
+<input type="checkbox" id="newsletter-subscribe" checked>
+<label for="newsletter-subscribe">Subscribe to our newsletter</label>
 
-          <input type="email" name="Contact" class="email-field" placeholder="amanshriwastava0@gmail.com" required>
+<!-- Modify the newsletter subscription form -->
+<div id="newsletter-form">
+  <!-- Newsletter subscription form content -->
+  <form>
+    <input type="email" name="email" placeholder="Enter your email">
+    <button>Subscribe</button>
+  </form>
+</div>
 
-          <button type="submit" class="btn-newsletter">Subscribe</button>
+<!-- Hide or show the form based on the checkbox state -->
+<script>
+  const newsletterForm = document.getElementById('newsletter-form');
+  const newsletterSubscribe = document.getElementById('newsletter-subscribe');
 
-        </form>
-
-      </div>
-
-    </div>
-
-  </div>
-
+  newsletterSubscribe.addEventListener('change', () => {
+    if (newsletterSubscribe.checked) {
+      newsletterForm.style.display = 'block';
+    } else {
+      newsletterForm.style.display = 'none';
+    }
+  });
+</script>
 
   <!--
     - NOTIFICATION TOAST
